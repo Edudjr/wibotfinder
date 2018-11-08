@@ -16,6 +16,8 @@ class ITunesAPITests: XCTestCase {
     
     override func setUp() {
         super.setUp()
+        
+        //Usually I also create a Mock Request and pass it into provider, so I can test any scenario
         request = AlamofireRequest()
         iTunesAPI = ITunesAPI(provider: request)
     }

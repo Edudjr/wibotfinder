@@ -9,31 +9,42 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var tableView: UITableView!
+    
+    var trackCatalogModel: TrackCatalogModel?
+    var tracks: [TrackCatalogModel.Track]? {
+        didSet {
+            self.tableView.reloadData()
+        }
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        trackCatalogModel = TrackCatalogModel()
+        let provider = AlamofireRequest()
+        trackCatalogModel?.iTunesAPI = ITunesAPI(provider: provider)
+        
+        trackCatalogModel?.getFilteredTracks(type: .all, query: "john wick", completion: { tracks in
+            self.tracks = tracks
+        })
     }
 }
 
-extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return tracks?.count ?? 0
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TrackReusableCell", for: indexPath) as! TrackCollectionViewCell
-//        let item = items[indexPath.row]
-//        cell.delegate = self
-//        cell.elementSet = item
-//        let str = formatElementsForDisplay(item)
-//        cell.elements.text = str
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TrackReusableCell", for: indexPath) as! TrackTableViewCell
+        if let track = tracks?[indexPath.row] {
+            cell.titleLabel.text = track.title
+            cell.subtitleLabel.text = track.subtitle
+        }
+        
         return cell
     }
 }

@@ -20,7 +20,8 @@
 		285D8F5D2193C18B00DCEC07 /* ITunesAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285D8F5C2193C18B00DCEC07 /* ITunesAPITests.swift */; };
 		285D8F602193C2AF00DCEC07 /* ITunesTrackModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285D8F5F2193C2AF00DCEC07 /* ITunesTrackModel.swift */; };
 		285D8F642193C53C00DCEC07 /* ITunesSearchResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285D8F632193C53C00DCEC07 /* ITunesSearchResponseModel.swift */; };
-		285D8F662193C8DA00DCEC07 /* TrackCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285D8F652193C8DA00DCEC07 /* TrackCollectionViewCell.swift */; };
+		286446EF2193D24800C389E6 /* TrackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286446EE2193D24800C389E6 /* TrackTableViewCell.swift */; };
+		286446F12193D6CE00C389E6 /* TrackCatalogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286446F02193D6CE00C389E6 /* TrackCatalogModel.swift */; };
 		BF61EA6D9180A99D3070600F /* Pods_WiFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B940C7D79EFE82C2D00EC52 /* Pods_WiFinder.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,7 +53,8 @@
 		285D8F5C2193C18B00DCEC07 /* ITunesAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesAPITests.swift; sourceTree = "<group>"; };
 		285D8F5F2193C2AF00DCEC07 /* ITunesTrackModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesTrackModel.swift; sourceTree = "<group>"; };
 		285D8F632193C53C00DCEC07 /* ITunesSearchResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesSearchResponseModel.swift; sourceTree = "<group>"; };
-		285D8F652193C8DA00DCEC07 /* TrackCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCollectionViewCell.swift; sourceTree = "<group>"; };
+		286446EE2193D24800C389E6 /* TrackTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackTableViewCell.swift; sourceTree = "<group>"; };
+		286446F02193D6CE00C389E6 /* TrackCatalogModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCatalogModel.swift; sourceTree = "<group>"; };
 		4107DE481689B3F87BA1BF90 /* Pods-WiFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiFinder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WiFinder/Pods-WiFinder.debug.xcconfig"; sourceTree = "<group>"; };
 		4B940C7D79EFE82C2D00EC52 /* Pods_WiFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WiFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD9A1F079199DB24A9B34195 /* Pods-WiFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiFinder.release.xcconfig"; path = "Pods/Target Support Files/Pods-WiFinder/Pods-WiFinder.release.xcconfig"; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 		285D8F502193BC3200DCEC07 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				286446F02193D6CE00C389E6 /* TrackCatalogModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -139,7 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				285D8F302193BB2000DCEC07 /* ViewController.swift */,
-				285D8F652193C8DA00DCEC07 /* TrackCollectionViewCell.swift */,
+				286446EE2193D24800C389E6 /* TrackTableViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -361,14 +364,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				285D8F642193C53C00DCEC07 /* ITunesSearchResponseModel.swift in Sources */,
-				285D8F662193C8DA00DCEC07 /* TrackCollectionViewCell.swift in Sources */,
 				285D8F5B2193C0E500DCEC07 /* ITunesAPI.swift in Sources */,
 				285D8F602193C2AF00DCEC07 /* ITunesTrackModel.swift in Sources */,
 				285D8F542193BE5E00DCEC07 /* RequestProtocol.swift in Sources */,
+				286446EF2193D24800C389E6 /* TrackTableViewCell.swift in Sources */,
 				285D8F312193BB2000DCEC07 /* ViewController.swift in Sources */,
 				285D8F562193BEBB00DCEC07 /* AlamofireRequest.swift in Sources */,
 				285D8F2F2193BB2000DCEC07 /* AppDelegate.swift in Sources */,
 				285D8F582193BEFC00DCEC07 /* ITunesAPIProtocol.swift in Sources */,
+				286446F12193D6CE00C389E6 /* TrackCatalogModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,7 +12,13 @@ import Alamofire
 typealias CompletionWithTracks = ([ITunesTrackModel]?)->Void
 
 enum MediaType: String {
-    case movie, music, tvShow
+    case all, movie, music, tvShow
+}
+
+enum MediaKind: String {
+    case movie = "feature-movie"
+    case music = "song"
+    case tvShow = "tv-episode"
 }
 
 protocol ITunesAPIProtocol {
