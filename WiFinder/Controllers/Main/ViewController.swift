@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
-    var trackCatalogModel: TrackCatalogModel?
-    var tracks: [TrackCatalogModel.Track]? {
+    var selectedMediaType: MediaType?
+    var enteredQuery: String?
+    
+    var catalogModel: CatalogModel?
+    var tracks: [CatalogModel.Track]? {
         didSet {
             self.tableView.reloadData()
         }
@@ -23,13 +27,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        trackCatalogModel = TrackCatalogModel()
         let provider = AlamofireRequest()
-        trackCatalogModel?.iTunesAPI = ITunesAPI(provider: provider)
+        let iTunesAPI = ITunesAPI(provider: provider)
+        catalogModel = CatalogModel(iTunesAPI: iTunesAPI)
         
-        trackCatalogModel?.getFilteredTracks(type: .all, query: "john wick", completion: { tracks in
-            self.tracks = tracks
-        })
+        if let type = selectedMediaType, let query = enteredQuery {
+            catalogModel?.getFilteredTracks(type: type, query: query, completion: { tracks in
+                self.tracks = tracks
+            })
+        }
     }
 }
 
@@ -43,6 +49,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         if let track = tracks?[indexPath.row] {
             cell.titleLabel.text = track.title
             cell.subtitleLabel.text = track.subtitle
+            if let url = URL(string: track.thumbnail) {
+                cell.thumbnail.kf.setImage(with: url)
+            }
+            cell.icon.image = track.icon
         }
         
         return cell

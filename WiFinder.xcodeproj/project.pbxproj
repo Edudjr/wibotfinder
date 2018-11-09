@@ -21,7 +21,11 @@
 		285D8F602193C2AF00DCEC07 /* ITunesTrackModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285D8F5F2193C2AF00DCEC07 /* ITunesTrackModel.swift */; };
 		285D8F642193C53C00DCEC07 /* ITunesSearchResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285D8F632193C53C00DCEC07 /* ITunesSearchResponseModel.swift */; };
 		286446EF2193D24800C389E6 /* TrackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286446EE2193D24800C389E6 /* TrackTableViewCell.swift */; };
-		286446F12193D6CE00C389E6 /* TrackCatalogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286446F02193D6CE00C389E6 /* TrackCatalogModel.swift */; };
+		2878B256219514E600E5D4D8 /* TrackCatalogModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2878B255219514E600E5D4D8 /* TrackCatalogModelTests.swift */; };
+		2878B25821951A6200E5D4D8 /* CatalogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2878B25721951A6200E5D4D8 /* CatalogModel.swift */; };
+		2878B25A2195230D00E5D4D8 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2878B2592195230D00E5D4D8 /* PageViewController.swift */; };
+		2878B25F2195274B00E5D4D8 /* FirstScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2878B25E2195274B00E5D4D8 /* FirstScreenViewController.swift */; };
+		2878B2612195275900E5D4D8 /* SecondScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2878B2602195275900E5D4D8 /* SecondScreenViewController.swift */; };
 		BF61EA6D9180A99D3070600F /* Pods_WiFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B940C7D79EFE82C2D00EC52 /* Pods_WiFinder.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,7 +58,11 @@
 		285D8F5F2193C2AF00DCEC07 /* ITunesTrackModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesTrackModel.swift; sourceTree = "<group>"; };
 		285D8F632193C53C00DCEC07 /* ITunesSearchResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesSearchResponseModel.swift; sourceTree = "<group>"; };
 		286446EE2193D24800C389E6 /* TrackTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackTableViewCell.swift; sourceTree = "<group>"; };
-		286446F02193D6CE00C389E6 /* TrackCatalogModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCatalogModel.swift; sourceTree = "<group>"; };
+		2878B255219514E600E5D4D8 /* TrackCatalogModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCatalogModelTests.swift; sourceTree = "<group>"; };
+		2878B25721951A6200E5D4D8 /* CatalogModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogModel.swift; sourceTree = "<group>"; };
+		2878B2592195230D00E5D4D8 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		2878B25E2195274B00E5D4D8 /* FirstScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenViewController.swift; sourceTree = "<group>"; };
+		2878B2602195275900E5D4D8 /* SecondScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreenViewController.swift; sourceTree = "<group>"; };
 		4107DE481689B3F87BA1BF90 /* Pods-WiFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiFinder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WiFinder/Pods-WiFinder.debug.xcconfig"; sourceTree = "<group>"; };
 		4B940C7D79EFE82C2D00EC52 /* Pods_WiFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WiFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD9A1F079199DB24A9B34195 /* Pods-WiFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiFinder.release.xcconfig"; path = "Pods/Target Support Files/Pods-WiFinder/Pods-WiFinder.release.xcconfig"; sourceTree = "<group>"; };
@@ -113,9 +121,10 @@
 		285D8F422193BB2400DCEC07 /* WiFinderTests */ = {
 			isa = PBXGroup;
 			children = (
-				285D8F432193BB2400DCEC07 /* WiFinderTests.swift */,
 				285D8F452193BB2400DCEC07 /* Info.plist */,
+				285D8F432193BB2400DCEC07 /* WiFinderTests.swift */,
 				285D8F5C2193C18B00DCEC07 /* ITunesAPITests.swift */,
+				2878B255219514E600E5D4D8 /* TrackCatalogModelTests.swift */,
 			);
 			path = WiFinderTests;
 			sourceTree = "<group>";
@@ -133,7 +142,7 @@
 		285D8F502193BC3200DCEC07 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				286446F02193D6CE00C389E6 /* TrackCatalogModel.swift */,
+				2878B25721951A6200E5D4D8 /* CatalogModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -141,8 +150,9 @@
 		285D8F512193BC3700DCEC07 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				285D8F302193BB2000DCEC07 /* ViewController.swift */,
-				286446EE2193D24800C389E6 /* TrackTableViewCell.swift */,
+				2878B25C2195271F00E5D4D8 /* Main */,
+				2878B25D2195272D00E5D4D8 /* TrackTableViewCell */,
+				2878B25B2195270400E5D4D8 /* PageViewController */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -184,6 +194,32 @@
 				285D8F552193BEBB00DCEC07 /* AlamofireRequest.swift */,
 			);
 			path = Request;
+			sourceTree = "<group>";
+		};
+		2878B25B2195270400E5D4D8 /* PageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2878B2592195230D00E5D4D8 /* PageViewController.swift */,
+				2878B25E2195274B00E5D4D8 /* FirstScreenViewController.swift */,
+				2878B2602195275900E5D4D8 /* SecondScreenViewController.swift */,
+			);
+			path = PageViewController;
+			sourceTree = "<group>";
+		};
+		2878B25C2195271F00E5D4D8 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				285D8F302193BB2000DCEC07 /* ViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		2878B25D2195272D00E5D4D8 /* TrackTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				286446EE2193D24800C389E6 /* TrackTableViewCell.swift */,
+			);
+			path = TrackTableViewCell;
 			sourceTree = "<group>";
 		};
 		35A65F95E0702BC37E7C74FD /* Frameworks */ = {
@@ -344,11 +380,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-WiFinder/Pods-WiFinder-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Marshal/Marshal.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Marshal.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -364,15 +402,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				285D8F642193C53C00DCEC07 /* ITunesSearchResponseModel.swift in Sources */,
+				2878B25F2195274B00E5D4D8 /* FirstScreenViewController.swift in Sources */,
 				285D8F5B2193C0E500DCEC07 /* ITunesAPI.swift in Sources */,
+				2878B25A2195230D00E5D4D8 /* PageViewController.swift in Sources */,
+				2878B2612195275900E5D4D8 /* SecondScreenViewController.swift in Sources */,
 				285D8F602193C2AF00DCEC07 /* ITunesTrackModel.swift in Sources */,
+				2878B25821951A6200E5D4D8 /* CatalogModel.swift in Sources */,
 				285D8F542193BE5E00DCEC07 /* RequestProtocol.swift in Sources */,
 				286446EF2193D24800C389E6 /* TrackTableViewCell.swift in Sources */,
 				285D8F312193BB2000DCEC07 /* ViewController.swift in Sources */,
 				285D8F562193BEBB00DCEC07 /* AlamofireRequest.swift in Sources */,
 				285D8F2F2193BB2000DCEC07 /* AppDelegate.swift in Sources */,
 				285D8F582193BEFC00DCEC07 /* ITunesAPIProtocol.swift in Sources */,
-				286446F12193D6CE00C389E6 /* TrackCatalogModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +421,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2878B256219514E600E5D4D8 /* TrackCatalogModelTests.swift in Sources */,
 				285D8F5D2193C18B00DCEC07 /* ITunesAPITests.swift in Sources */,
 				285D8F442193BB2400DCEC07 /* WiFinderTests.swift in Sources */,
 			);
