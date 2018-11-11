@@ -21,26 +21,20 @@ class TrackTableViewCell: UITableViewCell {
     }
     
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
-        animateWidth(-20) { _ in }
+        animate()
     }
     
-    func animateWidth(_ width: CGFloat, completion: @escaping(Bool) -> Void) {
-        let duration = 1.0
-        let delay = 0.0
-        let damping = CGFloat(0.4)
-        let velocity = CGFloat(1.0)
-        let options = UIViewAnimationOptions.curveEaseIn
-        self.thumbnail.frame.size.width += width
+    func animate() {
+        self.thumbnail.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
         
-        UIView.animate(withDuration:duration,
-                       delay: delay,
-                       usingSpringWithDamping: damping,
-                       initialSpringVelocity: velocity,
-                       options: options,
+        UIView.animate(withDuration: 0.5,
+                       delay: 0,
+                       usingSpringWithDamping: CGFloat(0.20),
+                       initialSpringVelocity: CGFloat(3.0),
+                       options: UIViewAnimationOptions.allowUserInteraction,
                        animations: {
-                        self.thumbnail.frame.size.width -= width
-        }, completion: { success in
-            completion(success)
-        })
+                        self.thumbnail.transform = CGAffineTransform.identity
+                        
+        }, completion: nil)
     }
 }

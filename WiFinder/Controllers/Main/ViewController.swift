@@ -53,6 +53,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
                 cell.thumbnail.kf.setImage(with: url)
             }
             cell.icon.image = track.icon
+            cell.animate()
         }
         
         return cell
