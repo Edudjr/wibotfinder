@@ -9,43 +9,24 @@
 
 import UIKit
 
-class CatalogModel {
-    
+protocol CatalogModelProtocol {
+    func getFilteredTracks(type: MediaType, query: String, completion: @escaping([TrackEntity]?) -> Void)
+}
+
+class CatalogModel: CatalogModelProtocol {
     var iTunesAPI: ITunesAPIProtocol?
-    
-    struct Track {
-        let id: Int
-        let title: String
-        let subtitle: String
-        let thumbnail: String
-        let icon: UIImage
-        let type: MediaType
-        let preview: String
-    }
     
     init(iTunesAPI: ITunesAPIProtocol) {
         self.iTunesAPI = iTunesAPI
     }
     
-    func getMovie(query: String, completion: @escaping([Track]?) -> Void) {
-        getFilteredTracks(type: .movie, query: query, completion: completion)
-    }
-    
-    func getMusic(query: String, completion: @escaping([Track]?) -> Void) {
-        getFilteredTracks(type: .music, query: query, completion: completion)
-    }
-    
-    func getTvShow(query: String, completion: @escaping([Track]?) -> Void) {
-        getFilteredTracks(type: .tvShow, query: query, completion: completion)
-    }
-    
-    func getFilteredTracks(type: MediaType, query: String, completion: @escaping([Track]?) -> Void) {
+    func getFilteredTracks(type: MediaType, query: String, completion: @escaping([TrackEntity]?) -> Void) {
         iTunesAPI?.getTracks(mediaType: type, query: query, completion: { tracks in
             guard let tracks = tracks else {
                 completion(nil)
                 return
             }
-            var response = [Track]()
+            var response = [TrackEntity]()
             for iTrack in tracks {
                 if let track = self.trackFrom(iTrack) {
                     response.append(track)
@@ -58,7 +39,7 @@ class CatalogModel {
 
 // MARK: Converter
 extension CatalogModel {
-    func trackFrom(_ iTunesTrack: ITunesTrackModel) -> Track? {
+    func trackFrom(_ iTunesTrack: ITunesTrackModel) -> TrackEntity? {
         guard let id = iTunesTrack.trackId,
             let trackName = iTunesTrack.trackName,
             let artistName = iTunesTrack.artistName,
@@ -95,8 +76,7 @@ extension CatalogModel {
             break
         }
         
-        
-        let entity = Track(id: id,
+        let entity = TrackEntity(id: id,
                            title: title,
                            subtitle: subtitle,
                            thumbnail: artwork,

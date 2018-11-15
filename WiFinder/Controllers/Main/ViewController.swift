@@ -15,13 +15,15 @@ class ViewController: UIViewController {
     
     var selectedMediaType: MediaType?
     var enteredQuery: String?
-    var selectedTrack: CatalogModel.Track?
+    var selectedTrack: TrackEntity?
     var webView: WKWebView?
     var fadedBackground: UIView?
     var activityView: UIActivityIndicatorView?
     
-    var catalogModel: CatalogModel?
-    var tracks: [CatalogModel.Track]? {
+    //Dependencies
+    var catalogModel: CatalogModelProtocol?
+    
+    var tracks: [TrackEntity]? {
         didSet {
             self.tableView.reloadData()
         }
@@ -29,14 +31,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        let provider = AlamofireRequest()
-        let iTunesAPI = ITunesAPI(provider: provider)
-        catalogModel = CatalogModel(iTunesAPI: iTunesAPI)
-        
         webView?.navigationDelegate = self
-        
         if let type = selectedMediaType, let query = enteredQuery {
             catalogModel?.getFilteredTracks(type: type, query: query, completion: { tracks in
                 self.tracks = tracks
@@ -66,7 +61,6 @@ class ViewController: UIViewController {
 
         if let webView = webView {
             webView.translatesAutoresizingMaskIntoConstraints = false
-            //webView.contentMode = UIViewContentMode.scaleAspectFill
             webView.backgroundColor = UIColor.black
             webView.navigationDelegate = self
             self.view.addSubview(webView)
