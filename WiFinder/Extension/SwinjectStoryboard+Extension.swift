@@ -20,7 +20,7 @@ extension SwinjectStoryboard {
         defaultContainer.register(CatalogModelProtocol.self) { r in
             CatalogModel(iTunesAPI: r.resolve(ITunesAPIProtocol.self)!)
         }
-        defaultContainer.storyboardInitCompleted(ViewController.self) { r, c in
+        defaultContainer.storyboardInitCompleted(CatalogViewController.self) { r, c in
             c.catalogModel = r.resolve(CatalogModelProtocol.self)
         }
     }

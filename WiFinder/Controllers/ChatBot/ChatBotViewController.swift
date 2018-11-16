@@ -43,7 +43,7 @@ class ChatBotViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = segue.destination as? ViewController {
+        if let vc = segue.destination as? CatalogViewController {
             vc.selectedMediaType = selectedCategory
             vc.enteredQuery = selectedQuery
         }

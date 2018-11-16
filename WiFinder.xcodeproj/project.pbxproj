@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		280F7670219F1B0C00B6E843 /* CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F766F219F1B0C00B6E843 /* CatalogViewController.swift */; };
 		281197732198FAB400F82218 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281197722198FAB400F82218 /* PreviewViewController.swift */; };
 		2856F4E5219DB57A001F99B0 /* SwinjectStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2856F4E4219DB57A001F99B0 /* SwinjectStoryboard+Extension.swift */; };
 		2856F4EA219DBC5F001F99B0 /* TrackEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2856F4E9219DBC5F001F99B0 /* TrackEntity.swift */; };
@@ -17,7 +18,6 @@
 		2856F500219E83B7001F99B0 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2856F4FF219E83B7001F99B0 /* RoundedView.swift */; };
 		2856F502219E8B78001F99B0 /* ChatBotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2856F501219E8B78001F99B0 /* ChatBotModel.swift */; };
 		285D8F2F2193BB2000DCEC07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285D8F2E2193BB2000DCEC07 /* AppDelegate.swift */; };
-		285D8F312193BB2000DCEC07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285D8F302193BB2000DCEC07 /* ViewController.swift */; };
 		285D8F342193BB2000DCEC07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 285D8F322193BB2000DCEC07 /* Main.storyboard */; };
 		285D8F362193BB2400DCEC07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 285D8F352193BB2400DCEC07 /* Assets.xcassets */; };
 		285D8F392193BB2400DCEC07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 285D8F372193BB2400DCEC07 /* LaunchScreen.storyboard */; };
@@ -46,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		280F766F219F1B0C00B6E843 /* CatalogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewController.swift; sourceTree = "<group>"; };
 		281197722198FAB400F82218 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		2856F4E4219DB57A001F99B0 /* SwinjectStoryboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwinjectStoryboard+Extension.swift"; sourceTree = "<group>"; };
 		2856F4E9219DBC5F001F99B0 /* TrackEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackEntity.swift; sourceTree = "<group>"; };
@@ -57,7 +58,6 @@
 		2856F501219E8B78001F99B0 /* ChatBotModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBotModel.swift; sourceTree = "<group>"; };
 		285D8F2B2193BB2000DCEC07 /* WiFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WiFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		285D8F2E2193BB2000DCEC07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		285D8F302193BB2000DCEC07 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		285D8F332193BB2000DCEC07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		285D8F352193BB2400DCEC07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		285D8F382193BB2400DCEC07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -99,6 +99,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		280F766E219F1AFA00B6E843 /* Catalog */ = {
+			isa = PBXGroup;
+			children = (
+				280F766F219F1B0C00B6E843 /* CatalogViewController.swift */,
+			);
+			path = Catalog;
+			sourceTree = "<group>";
+		};
 		281197712198FA8B00F82218 /* PreviewWindow */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,7 +223,7 @@
 		285D8F512193BC3700DCEC07 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				2878B25C2195271F00E5D4D8 /* Main */,
+				280F766E219F1AFA00B6E843 /* Catalog */,
 				2856F4EB219E6C95001F99B0 /* ChatBot */,
 				2856F4F5219E7D3E001F99B0 /* ChatBotTableViewCell */,
 				281197712198FA8B00F82218 /* PreviewWindow */,
@@ -262,14 +270,6 @@
 				285D8F552193BEBB00DCEC07 /* AlamofireRequest.swift */,
 			);
 			path = Request;
-			sourceTree = "<group>";
-		};
-		2878B25C2195271F00E5D4D8 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				285D8F302193BB2000DCEC07 /* ViewController.swift */,
-			);
-			path = Main;
 			sourceTree = "<group>";
 		};
 		2878B25D2195272D00E5D4D8 /* TrackTableViewCell */ = {
@@ -463,6 +463,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				280F7670219F1B0C00B6E843 /* CatalogViewController.swift in Sources */,
 				2856F4E5219DB57A001F99B0 /* SwinjectStoryboard+Extension.swift in Sources */,
 				285D8F642193C53C00DCEC07 /* ITunesSearchResponseModel.swift in Sources */,
 				2856F500219E83B7001F99B0 /* RoundedView.swift in Sources */,
@@ -477,7 +478,6 @@
 				286446EF2193D24800C389E6 /* TrackTableViewCell.swift in Sources */,
 				281197732198FAB400F82218 /* PreviewViewController.swift in Sources */,
 				2856F4EA219DBC5F001F99B0 /* TrackEntity.swift in Sources */,
-				285D8F312193BB2000DCEC07 /* ViewController.swift in Sources */,
 				285D8F562193BEBB00DCEC07 /* AlamofireRequest.swift in Sources */,
 				285D8F2F2193BB2000DCEC07 /* AppDelegate.swift in Sources */,
 				285D8F582193BEFC00DCEC07 /* ITunesAPIProtocol.swift in Sources */,
