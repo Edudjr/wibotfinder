@@ -19,6 +19,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iNp-X7-89W">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                            <color key="textColor" red="0.63137254899999995" green="0.0" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="7KZ-Uw-eD4" kind="relationship" relationship="rootViewController" id="gms-0B-szR"/>
@@ -197,7 +201,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8pf-ch-n1s"/>
                     </view>
-                    <navigationItem key="navigationItem" id="id9-iq-qMs"/>
+                    <navigationItem key="navigationItem" title="WiBot Finder" id="id9-iq-qMs"/>
                     <connections>
                         <outlet property="inputText" destination="zcQ-10-q9i" id="44y-zR-s51"/>
                         <outlet property="tableView" destination="qHK-E1-NB6" id="17H-QK-A3v"/>
@@ -208,10 +212,10 @@
             </objects>
             <point key="canvasLocation" x="119" y="116"/>
         </scene>
-        <!--Catalog View Controller-->
+        <!--Catalog-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController modalPresentationStyle="overCurrentContext" id="BYZ-38-t0r" customClass="CatalogViewController" customModule="WiFinder" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Catalog" modalPresentationStyle="overCurrentContext" id="BYZ-38-t0r" customClass="CatalogViewController" customModule="WiFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
