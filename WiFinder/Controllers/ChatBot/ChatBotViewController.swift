@@ -55,19 +55,28 @@ class ChatBotViewController: UIViewController {
     
     @IBAction func sendButtonTapped(_ sender: Any) {
         if let text = inputText.text, !text.isEmpty {
-            let message = MessageEntity(owner: .me, message: text)
+            let trimmed = text.trimmingCharacters(in: .whitespacesAndNewlines)
+            let message = MessageEntity(owner: .me, message: trimmed)
             messages.append(message)
             inputText.text = ""
-            
-            let response = chatBotModel.getResponseFor(message: text)
-            let responseMessage = MessageEntity(owner: .other, message: response)
-            messages.append(responseMessage)
-            
-            tableView.reloadData()
-            
-            let indexPath = IndexPath(row: messages.count-1, section: 0)
-            tableView.scrollToRow(at: indexPath, at: .top, animated: true)
+            animateToLastMessage()
+            showResponseFor(trimmed)
         }
+    }
+    
+    func showResponseFor(_ text: String) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            let response = self.chatBotModel.getResponseFor(message: text)
+            let responseMessage = MessageEntity(owner: .other, message: response)
+            self.messages.append(responseMessage)
+            self.animateToLastMessage()
+        }
+    }
+    
+    func animateToLastMessage() {
+        tableView.reloadData()
+        let indexPath = IndexPath(row: self.messages.count-1, section: 0)
+        tableView.scrollToRow(at: indexPath, at: .top, animated: true)
     }
 }
 
@@ -96,6 +105,7 @@ extension ChatBotViewController: ChatBotModelDelegate {
         selectedCategory = category
         selectedQuery = query
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.dismissKeyboard()
             self.performSegue(withIdentifier: "botCatalogSegue", sender: nil)
         }
     }

@@ -61,7 +61,7 @@ class ChatBotModel {
             let fixed = word.lowercased()
             switch fixed {
             case "movies":
-                response = "Movies are great! What movie should I search?"
+                response = "Movies are great! What movie should I search for?"
                 selectedCategory = MediaType.movie
                 return response
             case "shows":
@@ -78,7 +78,7 @@ class ChatBotModel {
         }
         
         // Didn't find a proper response, still in "category" step
-        response = "Sorry, I coudn't undestand. Try something like Movies, TV Shows or Music!"
+        response = "Sorry. Try something like Movies, TV Shows or Music!"
         currentStep = .category
         return response
     }
