@@ -22,7 +22,7 @@ class ChatBotViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     //Dependencies
-    var chatBotModel = ChatBotModel()
+    var chatBotModel: ChatBotModelProtocol?
     
     var messages = [MessageEntity]()
     var selectedCategory: MediaType?
@@ -32,14 +32,15 @@ class ChatBotViewController: UIViewController {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap)
 
-        chatBotModel.delegate = self
+        chatBotModel?.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        messages.removeAll()
-        let welcomeMessage = chatBotModel.getWelcomeMessage()
-        messages.append(MessageEntity(owner: .other, message: welcomeMessage))
-        tableView.reloadData()
+        if let welcomeMessage = chatBotModel?.getWelcomeMessage() {
+            messages.removeAll()
+            messages.append(MessageEntity(owner: .other, message: welcomeMessage))
+            tableView.reloadData()
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -66,10 +67,11 @@ class ChatBotViewController: UIViewController {
     
     func showResponseFor(_ text: String) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            let response = self.chatBotModel.getResponseFor(message: text)
-            let responseMessage = MessageEntity(owner: .other, message: response)
-            self.messages.append(responseMessage)
-            self.animateToLastMessage()
+            if let response = self.chatBotModel?.getResponseFor(message: text) {
+                let responseMessage = MessageEntity(owner: .other, message: response)
+                self.messages.append(responseMessage)
+                self.animateToLastMessage()
+            }
         }
     }
     

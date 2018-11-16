@@ -20,8 +20,14 @@ extension SwinjectStoryboard {
         defaultContainer.register(CatalogModelProtocol.self) { r in
             CatalogModel(iTunesAPI: r.resolve(ITunesAPIProtocol.self)!)
         }
+        defaultContainer.register(ChatBotModelProtocol.self) { r in
+            ChatBotModel()
+        }
         defaultContainer.storyboardInitCompleted(CatalogViewController.self) { r, c in
             c.catalogModel = r.resolve(CatalogModelProtocol.self)
+        }
+        defaultContainer.storyboardInitCompleted(ChatBotViewController.self) { r, c in
+            c.chatBotModel = r.resolve(ChatBotModelProtocol.self)
         }
     }
 }

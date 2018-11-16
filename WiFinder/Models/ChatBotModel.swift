@@ -10,23 +10,31 @@ protocol ChatBotModelDelegate: class {
     func shouldSearchFor(category: MediaType, query: String)
 }
 
-class ChatBotModel {
+protocol ChatBotModelProtocol {
+    func getWelcomeMessage() -> String
+    func getCurrentStep() -> ChatBotSteps
+    func setCurrentStep(_ step: ChatBotSteps)
+    func getResponseFor(message: String) -> String
+    var delegate: ChatBotModelDelegate? { get set }
+}
+
+enum ChatBotSteps {
+    case welcome, category, query, last
+}
+
+class ChatBotModel: ChatBotModelProtocol {
     
-    enum Steps {
-        case welcome, category, query, last
-    }
-    
-    private var currentStep = Steps.welcome
+    private var currentStep = ChatBotSteps.welcome
     private var selectedCategory: MediaType?
     private var selectedQuery: String?
     
     var delegate: ChatBotModelDelegate?
     
-    func getCurrentStep() -> Steps {
+    func getCurrentStep() -> ChatBotSteps {
         return currentStep
     }
     
-    func setCurrentStep(_ step: Steps) {
+    func setCurrentStep(_ step: ChatBotSteps) {
         currentStep = step
     }
     
@@ -39,7 +47,7 @@ class ChatBotModel {
         return "Hi there! My name is Bot. What would you like to search today? Movies, TV Shows or Music?"
     }
     
-    private func getResponseFor(step: Steps, message: String) -> String {
+    private func getResponseFor(step: ChatBotSteps, message: String) -> String {
         switch step {
         case .welcome:
             return getWelcomeMessage()

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		280F7670219F1B0C00B6E843 /* CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F766F219F1B0C00B6E843 /* CatalogViewController.swift */; };
+		280F7672219F1E7900B6E843 /* ChatBotModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F7671219F1E7900B6E843 /* ChatBotModelTests.swift */; };
 		281197732198FAB400F82218 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281197722198FAB400F82218 /* PreviewViewController.swift */; };
 		2856F4E5219DB57A001F99B0 /* SwinjectStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2856F4E4219DB57A001F99B0 /* SwinjectStoryboard+Extension.swift */; };
 		2856F4EA219DBC5F001F99B0 /* TrackEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2856F4E9219DBC5F001F99B0 /* TrackEntity.swift */; };
@@ -47,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		280F766F219F1B0C00B6E843 /* CatalogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewController.swift; sourceTree = "<group>"; };
+		280F7671219F1E7900B6E843 /* ChatBotModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBotModelTests.swift; sourceTree = "<group>"; };
 		281197722198FAB400F82218 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		2856F4E4219DB57A001F99B0 /* SwinjectStoryboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwinjectStoryboard+Extension.swift"; sourceTree = "<group>"; };
 		2856F4E9219DBC5F001F99B0 /* TrackEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackEntity.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 				285D8F432193BB2400DCEC07 /* WiFinderTests.swift */,
 				285D8F5C2193C18B00DCEC07 /* ITunesAPITests.swift */,
 				2878B255219514E600E5D4D8 /* TrackCatalogModelTests.swift */,
+				280F7671219F1E7900B6E843 /* ChatBotModelTests.swift */,
 			);
 			path = WiFinderTests;
 			sourceTree = "<group>";
@@ -492,6 +495,7 @@
 				2878B256219514E600E5D4D8 /* TrackCatalogModelTests.swift in Sources */,
 				285D8F5D2193C18B00DCEC07 /* ITunesAPITests.swift in Sources */,
 				285D8F442193BB2400DCEC07 /* WiFinderTests.swift in Sources */,
+				280F7672219F1E7900B6E843 /* ChatBotModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
