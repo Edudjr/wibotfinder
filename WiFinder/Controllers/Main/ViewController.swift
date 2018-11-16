@@ -34,7 +34,11 @@ class ViewController: UIViewController {
         webView?.navigationDelegate = self
         if let type = selectedMediaType, let query = enteredQuery {
             catalogModel?.getFilteredTracks(type: type, query: query, completion: { tracks in
-                self.tracks = tracks
+                if let tracks = tracks, tracks.count > 0 {
+                    self.tracks = tracks
+                } else {
+                    self.performSegue(withIdentifier: "emptySegue", sender: nil)
+                }
             })
         }
     }

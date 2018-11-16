@@ -241,11 +241,58 @@
                     <connections>
                         <outlet property="tableView" destination="PXH-r0-dpr" id="MYw-eR-Gw5"/>
                         <segue destination="YrQ-xF-11R" kind="presentation" identifier="previewSegue" modalPresentationStyle="overCurrentContext" id="Pau-Uf-urf"/>
+                        <segue destination="utE-UL-W5q" kind="showDetail" identifier="emptySegue" id="mHM-ex-n8p"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1079" y="116"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="iwu-CX-Gch">
+            <objects>
+                <viewController id="utE-UL-W5q" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i6z-Xf-W3C">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oops!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLC-7E-vFa">
+                                <rect key="frame" x="156" y="300" width="63" height="27"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Looks like we haven't found any results for your search!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAU-1H-Q6B">
+                                <rect key="frame" x="40" y="337" width="295" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xZg-3F-cBa">
+                                <rect key="frame" x="156" y="398" width="63" height="30"/>
+                                <state key="normal" title="Try again"/>
+                                <connections>
+                                    <segue destination="5fG-cD-5nU" kind="show" id="ex3-uK-afQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pAU-1H-Q6B" firstAttribute="top" secondItem="SLC-7E-vFa" secondAttribute="bottom" constant="10" id="55O-cn-JZY"/>
+                            <constraint firstItem="xZg-3F-cBa" firstAttribute="centerX" secondItem="i6z-Xf-W3C" secondAttribute="centerX" id="GaQ-OA-BY1"/>
+                            <constraint firstItem="SLC-7E-vFa" firstAttribute="centerY" secondItem="i6z-Xf-W3C" secondAttribute="centerY" constant="-20" id="MCJ-iy-g2z"/>
+                            <constraint firstItem="SLC-7E-vFa" firstAttribute="centerX" secondItem="i6z-Xf-W3C" secondAttribute="centerX" id="bBS-RD-3eC"/>
+                            <constraint firstItem="xZg-3F-cBa" firstAttribute="top" secondItem="pAU-1H-Q6B" secondAttribute="bottom" constant="20" id="mR9-Wa-tB2"/>
+                            <constraint firstItem="zS7-5d-8Wj" firstAttribute="trailing" secondItem="pAU-1H-Q6B" secondAttribute="trailing" constant="40" id="rj0-FL-0WA"/>
+                            <constraint firstItem="pAU-1H-Q6B" firstAttribute="leading" secondItem="zS7-5d-8Wj" secondAttribute="leading" constant="40" id="wLX-9G-zAH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zS7-5d-8Wj"/>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GiR-gN-msM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1077.5999999999999" y="866.71664167916049"/>
         </scene>
         <!--Preview View Controller-->
         <scene sceneID="WJm-xj-rb7">
