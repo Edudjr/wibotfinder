@@ -10,6 +10,12 @@
 		281197732198FAB400F82218 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281197722198FAB400F82218 /* PreviewViewController.swift */; };
 		2856F4E5219DB57A001F99B0 /* SwinjectStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2856F4E4219DB57A001F99B0 /* SwinjectStoryboard+Extension.swift */; };
 		2856F4EA219DBC5F001F99B0 /* TrackEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2856F4E9219DBC5F001F99B0 /* TrackEntity.swift */; };
+		2856F4EE219E6CC9001F99B0 /* ChatBotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2856F4ED219E6CC9001F99B0 /* ChatBotViewController.swift */; };
+		2856F4F4219E776C001F99B0 /* KeyboardLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2856F4F3219E776C001F99B0 /* KeyboardLayoutConstraint.swift */; };
+		2856F4F9219E7E30001F99B0 /* ChatBotMineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2856F4F8219E7E30001F99B0 /* ChatBotMineCell.swift */; };
+		2856F4FB219E7E57001F99B0 /* ChatBotTheirsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2856F4FA219E7E57001F99B0 /* ChatBotTheirsCell.swift */; };
+		2856F500219E83B7001F99B0 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2856F4FF219E83B7001F99B0 /* RoundedView.swift */; };
+		2856F502219E8B78001F99B0 /* ChatBotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2856F501219E8B78001F99B0 /* ChatBotModel.swift */; };
 		285D8F2F2193BB2000DCEC07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285D8F2E2193BB2000DCEC07 /* AppDelegate.swift */; };
 		285D8F312193BB2000DCEC07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285D8F302193BB2000DCEC07 /* ViewController.swift */; };
 		285D8F342193BB2000DCEC07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 285D8F322193BB2000DCEC07 /* Main.storyboard */; };
@@ -46,6 +52,12 @@
 		281197722198FAB400F82218 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		2856F4E4219DB57A001F99B0 /* SwinjectStoryboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwinjectStoryboard+Extension.swift"; sourceTree = "<group>"; };
 		2856F4E9219DBC5F001F99B0 /* TrackEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackEntity.swift; sourceTree = "<group>"; };
+		2856F4ED219E6CC9001F99B0 /* ChatBotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBotViewController.swift; sourceTree = "<group>"; };
+		2856F4F3219E776C001F99B0 /* KeyboardLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardLayoutConstraint.swift; sourceTree = "<group>"; };
+		2856F4F8219E7E30001F99B0 /* ChatBotMineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBotMineCell.swift; sourceTree = "<group>"; };
+		2856F4FA219E7E57001F99B0 /* ChatBotTheirsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBotTheirsCell.swift; sourceTree = "<group>"; };
+		2856F4FF219E83B7001F99B0 /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
+		2856F501219E8B78001F99B0 /* ChatBotModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBotModel.swift; sourceTree = "<group>"; };
 		285D8F2B2193BB2000DCEC07 /* WiFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WiFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		285D8F2E2193BB2000DCEC07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		285D8F302193BB2000DCEC07 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +129,31 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
+		2856F4EB219E6C95001F99B0 /* ChatBot */ = {
+			isa = PBXGroup;
+			children = (
+				2856F4ED219E6CC9001F99B0 /* ChatBotViewController.swift */,
+			);
+			path = ChatBot;
+			sourceTree = "<group>";
+		};
+		2856F4F5219E7D3E001F99B0 /* ChatBotTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				2856F4F8219E7E30001F99B0 /* ChatBotMineCell.swift */,
+				2856F4FA219E7E57001F99B0 /* ChatBotTheirsCell.swift */,
+			);
+			path = ChatBotTableViewCell;
+			sourceTree = "<group>";
+		};
+		2856F4FE219E83A8001F99B0 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				2856F4FF219E83B7001F99B0 /* RoundedView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		285D8F222193BB2000DCEC07 = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +177,7 @@
 		285D8F2D2193BB2000DCEC07 /* WiFinder */ = {
 			isa = PBXGroup;
 			children = (
+				2856F4FE219E83A8001F99B0 /* Components */,
 				2856F4E3219DB543001F99B0 /* Extension */,
 				285D8F522193BC3D00DCEC07 /* Resources */,
 				285D8F512193BC3700DCEC07 /* Controllers */,
@@ -175,6 +213,7 @@
 			children = (
 				2856F4E8219DBC52001F99B0 /* Entities */,
 				2878B25721951A6200E5D4D8 /* CatalogModel.swift */,
+				2856F501219E8B78001F99B0 /* ChatBotModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -183,6 +222,8 @@
 			isa = PBXGroup;
 			children = (
 				2878B25C2195271F00E5D4D8 /* Main */,
+				2856F4EB219E6C95001F99B0 /* ChatBot */,
+				2856F4F5219E7D3E001F99B0 /* ChatBotTableViewCell */,
 				281197712198FA8B00F82218 /* PreviewWindow */,
 				2878B25D2195272D00E5D4D8 /* TrackTableViewCell */,
 				2878B25B2195270400E5D4D8 /* PageViewController */,
@@ -198,6 +239,7 @@
 				285D8F372193BB2400DCEC07 /* LaunchScreen.storyboard */,
 				285D8F352193BB2400DCEC07 /* Assets.xcassets */,
 				285D8F3A2193BB2400DCEC07 /* Info.plist */,
+				2856F4F3219E776C001F99B0 /* KeyboardLayoutConstraint.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -440,12 +482,17 @@
 			files = (
 				2856F4E5219DB57A001F99B0 /* SwinjectStoryboard+Extension.swift in Sources */,
 				285D8F642193C53C00DCEC07 /* ITunesSearchResponseModel.swift in Sources */,
+				2856F500219E83B7001F99B0 /* RoundedView.swift in Sources */,
+				2856F502219E8B78001F99B0 /* ChatBotModel.swift in Sources */,
+				2856F4F9219E7E30001F99B0 /* ChatBotMineCell.swift in Sources */,
 				2878B25F2195274B00E5D4D8 /* FirstScreenViewController.swift in Sources */,
 				285D8F5B2193C0E500DCEC07 /* ITunesAPI.swift in Sources */,
 				2878B25A2195230D00E5D4D8 /* PageViewController.swift in Sources */,
+				2856F4F4219E776C001F99B0 /* KeyboardLayoutConstraint.swift in Sources */,
 				2878B2612195275900E5D4D8 /* SecondScreenViewController.swift in Sources */,
 				285D8F602193C2AF00DCEC07 /* ITunesTrackModel.swift in Sources */,
 				2878B25821951A6200E5D4D8 /* CatalogModel.swift in Sources */,
+				2856F4EE219E6CC9001F99B0 /* ChatBotViewController.swift in Sources */,
 				285D8F542193BE5E00DCEC07 /* RequestProtocol.swift in Sources */,
 				286446EF2193D24800C389E6 /* TrackTableViewCell.swift in Sources */,
 				281197732198FAB400F82218 /* PreviewViewController.swift in Sources */,
@@ -454,6 +501,7 @@
 				285D8F562193BEBB00DCEC07 /* AlamofireRequest.swift in Sources */,
 				285D8F2F2193BB2000DCEC07 /* AppDelegate.swift in Sources */,
 				285D8F582193BEFC00DCEC07 /* ITunesAPIProtocol.swift in Sources */,
+				2856F4FB219E7E57001F99B0 /* ChatBotTheirsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
