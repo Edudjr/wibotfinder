@@ -33,6 +33,7 @@ class ChatBotViewController: UIViewController {
         view.addGestureRecognizer(tap)
 
         chatBotModel?.delegate = self
+        inputText.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -82,6 +83,7 @@ class ChatBotViewController: UIViewController {
     }
 }
 
+// MARK: UITableViewDelegate
 extension ChatBotViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return messages.count
@@ -102,6 +104,7 @@ extension ChatBotViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
+// MARK: ChatBotModelDelegate
 extension ChatBotViewController: ChatBotModelDelegate {
     func shouldSearchFor(category: MediaType, query: String) {
         selectedCategory = category
@@ -110,5 +113,13 @@ extension ChatBotViewController: ChatBotModelDelegate {
             self.dismissKeyboard()
             self.performSegue(withIdentifier: "botCatalogSegue", sender: nil)
         }
+    }
+}
+
+// MARK: UITextFieldDelegate
+extension ChatBotViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        sendButtonTapped(textField)
+        return false
     }
 }
