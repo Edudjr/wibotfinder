@@ -152,18 +152,18 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="553"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TheirsCell" rowHeight="90" id="tdj-zu-EFY" customClass="ChatBotTheirsCell" customModule="WiFinder" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="90"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TheirsCell" rowHeight="50" id="tdj-zu-EFY" customClass="ChatBotTheirsCell" customModule="WiFinder" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tdj-zu-EFY" id="ZuO-k8-sn2">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EMj-wa-1Ch" customClass="RoundedView" customModule="WiFinder" customModuleProvider="target">
-                                                    <rect key="frame" x="61" y="5" width="68" height="79.5"/>
+                                                    <rect key="frame" x="70" y="10" width="68" height="35"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Theirs" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l43-SL-fde">
-                                                            <rect key="frame" x="10" y="5" width="48" height="69.5"/>
+                                                            <rect key="frame" x="10" y="5" width="48" height="25"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -185,38 +185,39 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Bot:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q6u-4L-KQV">
-                                                    <rect key="frame" x="20" y="35" width="31" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="roboto-hi" translatesAutoresizingMaskIntoConstraints="NO" id="NL4-wx-23F">
+                                                    <rect key="frame" x="20" y="11" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="15O-9C-Rfk"/>
+                                                        <constraint firstAttribute="height" constant="40" id="oIg-No-H3P"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="EMj-wa-1Ch" secondAttribute="bottom" constant="5" id="3pS-Uk-fs3"/>
-                                                <constraint firstItem="Q6u-4L-KQV" firstAttribute="leading" secondItem="ZuO-k8-sn2" secondAttribute="leadingMargin" constant="5" id="8zN-ct-YjX"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="EMj-wa-1Ch" secondAttribute="trailing" constant="15" id="gEJ-gM-ohC"/>
-                                                <constraint firstItem="Q6u-4L-KQV" firstAttribute="centerY" secondItem="ZuO-k8-sn2" secondAttribute="centerY" id="j0d-NI-9qP"/>
-                                                <constraint firstItem="EMj-wa-1Ch" firstAttribute="top" secondItem="ZuO-k8-sn2" secondAttribute="top" constant="5" id="jOV-zP-w09"/>
-                                                <constraint firstItem="EMj-wa-1Ch" firstAttribute="leading" secondItem="Q6u-4L-KQV" secondAttribute="trailing" constant="10" id="w7d-MF-oxc"/>
+                                                <constraint firstItem="EMj-wa-1Ch" firstAttribute="top" secondItem="ZuO-k8-sn2" secondAttribute="top" constant="10" id="jOV-zP-w09"/>
+                                                <constraint firstItem="EMj-wa-1Ch" firstAttribute="leading" secondItem="NL4-wx-23F" secondAttribute="trailing" constant="10" id="l7D-tE-qlo"/>
+                                                <constraint firstItem="NL4-wx-23F" firstAttribute="leading" secondItem="ZuO-k8-sn2" secondAttribute="leadingMargin" constant="5" id="lju-xr-Yvd"/>
+                                                <constraint firstItem="NL4-wx-23F" firstAttribute="top" secondItem="ZuO-k8-sn2" secondAttribute="topMargin" id="z2a-iI-ph9"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="messageLabel" destination="l43-SL-fde" id="gZn-iO-oAc"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MineCell" rowHeight="90" id="hmu-Gw-LNm" customClass="ChatBotMineCell" customModule="WiFinder" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="118" width="375" height="90"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MineCell" rowHeight="50" id="hmu-Gw-LNm" customClass="ChatBotMineCell" customModule="WiFinder" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="78" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hmu-Gw-LNm" id="PtJ-6u-xgE">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7zU-Da-oeF" customClass="RoundedView" customModule="WiFinder" customModuleProvider="target">
-                                                    <rect key="frame" x="302.5" y="5" width="57.5" height="79.5"/>
+                                                    <rect key="frame" x="302.5" y="10" width="57.5" height="35"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mine" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgo-Xh-Lt5">
-                                                            <rect key="frame" x="10" y="5" width="37.5" height="69.5"/>
+                                                            <rect key="frame" x="10" y="5" width="37.5" height="25"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -243,7 +244,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="7zU-Da-oeF" secondAttribute="trailing" constant="15" id="4XW-QB-53O"/>
                                                 <constraint firstAttribute="bottom" secondItem="7zU-Da-oeF" secondAttribute="bottom" constant="5" id="pYF-w9-m3U"/>
                                                 <constraint firstItem="7zU-Da-oeF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="PtJ-6u-xgE" secondAttribute="leading" constant="15" id="vfb-eE-6an"/>
-                                                <constraint firstItem="7zU-Da-oeF" firstAttribute="top" secondItem="PtJ-6u-xgE" secondAttribute="top" constant="5" id="ySN-mY-klP"/>
+                                                <constraint firstItem="7zU-Da-oeF" firstAttribute="top" secondItem="PtJ-6u-xgE" secondAttribute="top" constant="10" id="ySN-mY-klP"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -317,7 +318,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PBx-RG-rd2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-647" y="897"/>
+            <point key="canvasLocation" x="-647.20000000000005" y="896.40179910044981"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="P5Q-mG-wGr">
@@ -511,6 +512,9 @@
             <point key="canvasLocation" x="2024.8" y="115.59220389805098"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="roboto-hi" width="30" height="30"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="e2c-bK-mLf"/>
     </inferredMetricsTieBreakers>

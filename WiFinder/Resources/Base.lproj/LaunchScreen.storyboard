@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,7 +18,49 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BFR-o0-mei">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="roboto-logo-gradient" translatesAutoresizingMaskIntoConstraints="NO" id="Raf-3t-FYr">
+                                        <rect key="frame" x="90" y="240.5" width="195" height="166"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Raf-3t-FYr" secondAttribute="height" multiplier="47:40" id="Qv4-Ct-SxR"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WiBot" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tBA-fM-hBR">
+                                        <rect key="frame" x="158" y="160" width="59" height="27"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <color key="textColor" red="0.63137254901960782" green="0.0" blue="0.79607843137254897" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aLo-72-duL">
+                                        <rect key="frame" x="144" y="187" width="87" height="39"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <color key="textColor" red="0.63137254901960782" green="0.0" blue="0.79607843137254897" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="aLo-72-duL" firstAttribute="top" secondItem="tBA-fM-hBR" secondAttribute="bottom" id="QDj-ld-HOt"/>
+                                    <constraint firstItem="tBA-fM-hBR" firstAttribute="centerX" secondItem="BFR-o0-mei" secondAttribute="centerX" id="a3R-zR-3yT"/>
+                                    <constraint firstItem="Raf-3t-FYr" firstAttribute="top" secondItem="aLo-72-duL" secondAttribute="bottom" constant="15" id="fgi-9b-kcd"/>
+                                    <constraint firstItem="aLo-72-duL" firstAttribute="centerX" secondItem="BFR-o0-mei" secondAttribute="centerX" id="gLV-Ta-7g6"/>
+                                    <constraint firstItem="Raf-3t-FYr" firstAttribute="leading" secondItem="BFR-o0-mei" secondAttribute="leading" constant="90" id="gjq-mG-5e7"/>
+                                    <constraint firstItem="Raf-3t-FYr" firstAttribute="centerY" secondItem="BFR-o0-mei" secondAttribute="centerY" id="lez-Mm-TFO"/>
+                                    <constraint firstItem="Raf-3t-FYr" firstAttribute="centerX" secondItem="BFR-o0-mei" secondAttribute="centerX" id="s3q-3h-IB9"/>
+                                    <constraint firstAttribute="trailing" secondItem="Raf-3t-FYr" secondAttribute="trailing" constant="90" id="wJf-dr-v7h"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="BFR-o0-mei" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Krq-kH-D5s"/>
+                            <constraint firstItem="BFR-o0-mei" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="XSD-lu-Ekd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BFR-o0-mei" secondAttribute="bottom" id="hjP-qr-r2b"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BFR-o0-mei" secondAttribute="trailing" id="wFl-bY-E4v"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -26,4 +69,7 @@
             <point key="canvasLocation" x="140" y="371"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="roboto-logo-gradient" width="128" height="128"/>
+    </resources>
 </document>
